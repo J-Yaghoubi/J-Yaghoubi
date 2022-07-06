@@ -1,10 +1,10 @@
 ## Hi there 👋
 
-<!--
-**J-Yaghoubi/J-Yaghoubi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
--->
-
-<div dir="rtl">
+<div align="left">
+    <picture align="right">
+        <img align="right" width="120em" height="120em" src="https://github.com/J-Yaghoubi/J-Yaghoubi/blob/main/programming.gif">
+    </picture>
+<br>
 
 I’m currently learning: :penguin: Linux      
 
