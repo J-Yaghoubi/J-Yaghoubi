@@ -1,4 +1,4 @@
-## Hi there 👋
+### :sparkles: Coders love codes so let me introduce myself in this manner:
 
 <div dir="ltr">
 
@@ -8,13 +8,13 @@ from abc import ABC
 class Creature(ABC):
     pass
 
-class PersonalFeaturesMixin:
+class JafarFeaturesMixin:
     def add_abilities(self) -> None:
         self.job_skills = ['Coding', 'Financial Markets Analyzing', 'Business']
         self.sport = ['Horseback Riding', 'Camping', 'Bodybuilding']
         self.favorites = ['Coffee', 'Games']
         
-class Human(Creature, PersonalFeaturesMixin):
+class Human(Creature, JafarFeaturesMixin):
     def __init__(self, full_name: str, location: str, language: str) -> None:       
         self.full_name = full_name
         self.location = location
