@@ -5,7 +5,7 @@
 ```python
 from abc import ABC
 
-class Human(ABC):
+class Creature(ABC):
     pass
 
 class PersonalFeaturesMixin:
@@ -14,7 +14,7 @@ class PersonalFeaturesMixin:
         self.sport = ['Horseback Riding', 'Camping', 'Bodybuilding']
         self.favorites = ['Coffee', 'Games']
         
-class Human(Human, PersonalFeaturesMixin):
+class Human(Creature, PersonalFeaturesMixin):
     def __init__(self, full_name: str, location: str, language: str) -> None:       
         self.full_name = full_name
         self.location = location
@@ -28,15 +28,16 @@ jeff.add_abilities()
 jeff.say_hello()    
 
 ```
+<!--
 </div>
-
 <div align="left">
     <picture align="right">
         <img align="right" width="140em" height="140em" src="https://github.com/J-Yaghoubi/J-Yaghoubi/blob/main/programming.gif">
     </picture>
 <br>
-
 </div>
+-->
+
  <br>
 
  ## 🛠 &nbsp;Tech Stack
