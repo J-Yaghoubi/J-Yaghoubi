@@ -4,29 +4,32 @@
 <div dir="ltr">
 
 ```python
-from abc import ABC
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
 
-class Creature(ABC):
-    pass
 
-class JafarFeaturesMixin:
-    def add_abilities(self) -> None:
-        self.job_skills = ['Coding', 'Financial Markets Analyzing', 'Business']
-        self.sport = ['Horseback Riding', 'Camping', 'Bodybuilding']
-        self.favorites = ['Coffee', 'Games']
-        
-class Human(Creature, JafarFeaturesMixin):
-    def __init__(self, full_name: str, location: str, language: str) -> None:       
-        self.full_name = full_name
-        self.location = location
-        self.language = language
+class Human(ABC):
+    @abstractmethod
+    def say_hello(self):
+        pass
+
+
+@dataclass
+class InformationMixin:
+    full_name: str
+    location: str
+    language: str
+
+
+@dataclass
+class Developer(Human, InformationMixin):
 
     def say_hello(self):
-        print('Glad to have you here. I hope you will be interested in my projects')        
+        print('Glad to have you here. I hope you will be interested in my projects')      
         
-jeff = Human('Seyed-Jafar-Yaghoubi', 'Iran', 'Persian')   
-jeff.add_abilities() 
-jeff.say_hello()    
+
+jeff = Developer('Seyed-Jafar-Yaghoubi', 'Iran', 'Persian')   
+jeff.say_hello()
 
 ```
 <!--
